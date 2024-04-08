@@ -1,28 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    package="com.immotep.app">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
+    <application android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
+        android:name=".appcomponents.di.MyApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Immotep"
-        tools:targetApi="31" >
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Immotep" >
+        android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity android:name="com.immotep.app.modules.etatsdeslieux.ui.EtatDesLieuxActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.signatureduproprietaire.ui.SignatureDuProprietaireActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.signaturedulocataireone.ui.SignatureDuLocataireOneActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.error.ui.ErrorActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.etatsdeslieuxone.ui.EtatDesLieuxOneActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.etatsdeslieuxsix.ui.EtatDesLieuxSixActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.etatsdeslieuxthree.ui.EtatDesLieuxThreeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.etatsdeslieuxfive.ui.EtatDesLieuxFiveActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.signaturedulocataire.ui.SignatureDuLocataireActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.detailsfull.ui.DetailsFullActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.details.ui.DetailsActivity" android:screenOrientation="portrait" android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.immotep.app.modules.framehree.ui.FrameThreeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.pageaccueil.ui.PageAccueilActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.immotep.app.modules.etatsdeslieuxtwo.ui.EtatDesLieuxTwoActivity" android:screenOrientation="portrait"/>
     </application>
-
 </manifest>
+
+
